@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InsulinX-DataForce APP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="static/styles/layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" rel="stylesheet"> -->
+  </head>
+<body>
+  <div class="navbar navbar-dark bg-dark">
+    <h1>InsulinX</h1>
+  </div>
+  <main role="main">
+  <div class="container">
+    <form class="form" action="/get_id" method="POST">
+      <p>Enter your food/meal:
+    		<input name="meal" class="formInput1" type="text" placeholder="Enter your meal" >
+      </p>
+			<p>Enter the size of the portion:
+        <input name="sizeofportion" class="formInput" type="text" placeholder="In g/ml" >
+      </p>
+      <p>Select your recommended insulin/carb ratio:
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+          <label class="form-check-label" for="exampleRadios1">1 : 8</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">1 : 10</label>
+        </div>
+        <div class="form-check">
+  				<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3"checked>
+  				<label class="form-check-label" for="exampleRadios3">1 : 15</label>
+        </div>
+      </p>
+      <br>
+          	<button class="btn" type="reset">Cancel</button>
+            <button class="btn1" type="submit">Calculate</button>
+        </form>
+      </div>
+      <br>
+    
+      {% block content %}
+
+      {% endblock %} 
+
+    </main>
+    </div>
+  </div>
+</div>
+​
+</body>
+</html>
